@@ -15,6 +15,7 @@ end
 function _draw()
 cls(0)
 	spr(1, player.x, player.y)
+	hs()
 end
 
 function _update()
