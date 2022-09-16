@@ -5,6 +5,14 @@ player = {
     sp = 1,
     score = 1
 }
+enemy = {
+    x = player.x,
+    y = player.y,
+    speed = 0,
+    sp = 1,
+    score = 1
+}
 function hs()
-    print(player.score, 60, 5, 136)
+    print("highscore:", 45, 5, 136)
+    print(player.score, 85, 5, 136)
 end
