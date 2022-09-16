@@ -2,19 +2,25 @@ pico-8 cartridge // http://www.pico-8.com
 version 38
 __lua__
 --init
+#include player_init.lua
 function _init()
-	
+	cls(0)
+	print(player.speed, 20, 20, 4)
 end
 
 
 -->8
 --update
+#include movement.lua
 function _draw()
-
+cls(0)
+	spr(1, player.x, player.y)
 end
 
 function _update()
-
+	move()
+	player.y +=player.speed
+	player.speed=0
 end
 __gfx__
 00000000700000000000000700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
