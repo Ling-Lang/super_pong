@@ -9,7 +9,7 @@ end
 
 -->8
 --update
-funtion _draw()
+function _draw()
 
 end
 
