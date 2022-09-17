@@ -12,6 +12,12 @@ enemy = {
     sp = 1,
     score = 1
 }
+ball = {
+    x = 60,
+    y = 60,
+    speedx = 1,
+    speedy = 1
+}
 function hs()
     print("highscore:", 45, 5, 136)
     print(player.score, 85, 5, 136)

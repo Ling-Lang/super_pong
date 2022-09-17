@@ -19,11 +19,13 @@ cls(0)
 	spr(1, player.x, player.y)
 	spr(2, 120, player.y)
 	if player.score > 3 then game_over()end
+	spr(3,ball.x,ball.y)
 	hs()
 end
 
 function _update()
 	move()
+ ball.x+=ball.speedx
 	player.y +=player.speed
 	enemy.y +=player.speed
 	player.speed=0
