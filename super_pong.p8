@@ -3,6 +3,8 @@ version 38
 __lua__
 --init
 #include player_init.lua
+#include movement.lua
+#include over.lua
 function _init()
 	cls(0)
 	print(player.speed, 20, 20, 4)
@@ -11,16 +13,19 @@ end
 
 -->8
 --update
-#include movement.lua
+
 function _draw()
 cls(0)
 	spr(1, player.x, player.y)
+	spr(2, 120, player.y)
+	if player.score > 3 then game_over()end
 	hs()
 end
 
 function _update()
 	move()
 	player.y +=player.speed
+	enemy.y +=player.speed
 	player.speed=0
 end
 __gfx__
