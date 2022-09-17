@@ -9,6 +9,6 @@ function move()
     -- Debug end
     if(enemy.y<0) then enemy.y=120end
     if(enemy.y>120) then enemy.y=0end
-    if(ball.x>120) then player.score+=1 ball.x=60end
-    if(ball.x<0) then player.score-=1 ball.x=60end
+    if(ball.x>120) then player.score+=1 ball.x=60 ball.speedx= -1end
+    if(ball.x<-2) then player.score-=1 ball.x=60end
 end

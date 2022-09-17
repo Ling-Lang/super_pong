@@ -15,12 +15,14 @@ enemy = {
 ball = {
     x = 60,
     y = 60,
-    speedx = 3,
+    speedx = -0.4,
     speedy = 1
 }
 hitboxp = {
-  x1 = 
+  x1, x2 = player.x, player.x+1,
+  y1, y2 = player.y, player.y+8
 }
 hitboxe = {
-
+  x1, x2 = enemy.x, enemy.x+1,
+  y1, y2 = enemy.y, enemy.y+8
 }
