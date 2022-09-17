@@ -2,9 +2,9 @@ pico-8 cartridge // http://www.pico-8.com
 version 38
 __lua__
 --init
-#include player_init.lua
+#include objects.lua
 #include movement.lua
-#include over.lua
+#include events.lua
 function _init()
 	cls(0)
 	print(player.speed, 20, 20, 4)
@@ -16,9 +16,8 @@ end
 
 function _draw()
 cls(0)
-	spr(1, player.x, player.y)
+ spr(1,player.x, player.y)
 	spr(2, 120, player.y)
-	if player.score > 3 then game_over()end
 	spr(3,ball.x,ball.y)
 	hs()
 end

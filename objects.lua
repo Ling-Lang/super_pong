@@ -15,7 +15,7 @@ enemy = {
 ball = {
     x = 60,
     y = 60,
-    speedx = 1,
+    speedx = 3,
     speedy = 1
 }
 function hs()
