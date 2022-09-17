@@ -18,7 +18,9 @@ ball = {
     speedx = 3,
     speedy = 1
 }
-function hs()
-    print("highscore:", 45, 5, 136)
-    print(player.score, 85, 5, 136)
-end
+hitboxp = {
+  x1 = 
+}
+hitboxe = {
+
+}
