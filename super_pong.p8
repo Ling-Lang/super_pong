@@ -95,6 +95,7 @@ function _update()
 	update_posi()
 	hit()
 	player.speed=0
+	abil()
 --	enemy.speed=0
 
 				--animation

@@ -30,29 +30,58 @@ function hit()
   and ball.y < hitboxp.y2
   and ball.x > hitboxp.x1
   and ball.x < hitboxp.x2 then
-    ball.speedx = 3
+    if(playerhit==true) then
+      ball.speedx *=3
+      --printh("playerhit")
+    end
+  elseif ball.y > hitboxp.y1
+  and ball.y < hitboxp.y2
+  and ball.x > hitboxp.x1
+  and ball.x < hitboxp.x2 then
+    if(playerhit==false) then
+      ball.speedx = 3
+    end
   end
   if ball.y > hitboxp.y1
   and ball.y < hitboxp.y2
   and ball.x > hitboxp.x1
   and ball.x < hitboxp.x2
   and player.speed > 1 then
-    ball.speedx = 3
     ball.speedy = player.speed
+    if(playerhit==true) then
+      ball.speedx *=2
+      ball.speedy *=2
+      --printh("playerhit")
+    end
+  elseif ball.y > hitboxp.y1
+  and ball.y < hitboxp.y2
+  and ball.x > hitboxp.x1
+  and ball.x < hitboxp.x2 then
+      ball.speedx = 3
   end
   if ball.y > hitboxp.y1
   and ball.y < hitboxp.y2
   and ball.x > hitboxp.x1
   and ball.x < hitboxp.x2
   and player.speed < 1 then
-    ball.speedx = 3
     ball.speedy = player.speed
+    if(playerhit==true) then
+      ball.speedx *=2
+      ball.speedy *=2
+      --printh("playerhit")
+    end
+  elseif ball.y > hitboxp.y1
+  and ball.y < hitboxp.y2
+  and ball.x > hitboxp.x1
+  and ball.x < hitboxp.x2 then
+      ball.speedx = 3
   end
   if ball.y > hitboxe.y1
   and ball.y < hitboxe.y2
   and ball.x+8 > hitboxe.x1
   and ball.x < hitboxe.x2 then
     ball.speedx = -3
+    playerhit = false
   end
   if ball.y > hitboxe.y1
   and ball.y < hitboxe.y2
@@ -61,6 +90,7 @@ function hit()
   and enemy.speed < 1 then
     ball.speedx = -3
     ball.speedy = -0.8
+    playerhit = false
   end
   if ball.y > hitboxe.y1
   and ball.y < hitboxe.y2
@@ -69,14 +99,25 @@ function hit()
   and enemy.speed < 1 then
     ball.speedx = -3
     ball.speedy = 0.8
+    playerhit = false
   end
 end
 
 function eai()
   local time = 1
   for time=1, 300 do
-  printh(time)
+  --printh(time)
     if ball.y > enemy.y then enemy.speed = 1.8 end
     if ball.y < enemy.y then enemy.speed = -1.8 end
   end
 end
+
+function abil()
+  --speed
+  
+  if btn(4) then
+    playerhit = true
+    --printh("speed")
+  end
+end   
+  
