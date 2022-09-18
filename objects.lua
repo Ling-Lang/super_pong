@@ -6,7 +6,7 @@ player = {
     score = 1
 }
 enemy = {
-    x = player.x,
+    x = 125,
     y = player.y,
     speed = 0,
     sp = 1,
@@ -20,7 +20,7 @@ ball = {
 }
 hitboxp = {
   x1, x2 = player.x, player.x+1,
-  y1, y2 = player.y, player.y+8
+  y1, y2 = player.y, player.y
 }
 hitboxe = {
   x1, x2 = enemy.x, enemy.x+1,
