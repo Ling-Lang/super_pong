@@ -15,8 +15,8 @@ enemy = {
 ball = {
     x = 60,
     y = 60,
-    speedx = -0.4,
-    speedy = 1
+    speedx = -1,
+    speedy = 0
 }
 hitboxp = {
   x1, x2 = player.x, player.x+1,

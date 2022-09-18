@@ -11,7 +11,6 @@ function _init()
 	print(player.speed, 20, 20, 4)
 end
 
-
 -->8
 --update
 
