@@ -33,7 +33,7 @@ function hit()
   if ball.y > hitboxe.y1
   and ball.y < hitboxe.y2
   and ball.x > hitboxe.x1
-  and ball.x <= hitboxe.x2 then
+  and ball.x < hitboxe.x2 then
     ball.speedx = -3
   end
 end
