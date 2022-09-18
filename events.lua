@@ -10,6 +10,7 @@ function hs()
     print(hitboxp.y1)
     print(hitboxp.y2)
     print(ball.y)
+    print(enemy.speed)
 end
 
 function update_posi()
@@ -17,10 +18,11 @@ function update_posi()
   ball.y+=ball.speedy
   player.y +=player.speed
   enemy.y +=player.speed
-  hitboxp.x1, hitboxp.x2 = player.x, player.x+2.5
-  hitboxp.y1, hitboxp.y2 = player.y-3, player.y+10
-  hitboxe.x1, hitboxe.x2 = enemy.x, enemy.x+3
-  hitboxe.y1, hitboxe.y2 = enemy.y-3, enemy.y+10
+  hitboxp.x1, hitboxp.x2  = player.x-1, player.x+3
+  hitboxp.y1, hitboxp.y2 = player.y-7, player.y+20
+  hitboxe.x1, hitboxe.x2 = enemy.x-1, enemy.x+3
+  hitboxe.y1, hitboxe.y2 = enemy.y-7, enemy.y+20
+  enemy.speed = player.speed
 end
 
 function hit()
@@ -36,7 +38,7 @@ function hit()
   and ball.x < hitboxp.x2
   and player.speed > 1 then
     ball.speedx = 3
-    ball.speedy = 0.7
+    ball.speedy = 0.8
   end
   if ball.y > hitboxp.y1
   and ball.y < hitboxp.y2
@@ -44,7 +46,7 @@ function hit()
   and ball.x < hitboxp.x2
   and player.speed < 1 then
     ball.speedx = 3
-    ball.speedy = -0.7
+    ball.speedy = -0.8
   end
   if ball.y > hitboxe.y1
   and ball.y < hitboxe.y2
@@ -58,7 +60,7 @@ function hit()
   and ball.x < hitboxe.x2
   and enemy.speed < 1 then
     ball.speedx = -3
-    ball.speedy = -0.7
+    ball.speedy = -0.8
   end
   if ball.y > hitboxe.y1
   and ball.y < hitboxe.y2
@@ -66,6 +68,6 @@ function hit()
   and ball.x > hitboxe.x2
   and enemy.speed < 1 then
     ball.speedx = -3
-    ball.speedy = 0.7
+    ball.speedy = 0.8
   end
 end
