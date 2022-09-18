@@ -18,7 +18,7 @@ function update_posi()
   enemy.y +=player.speed
   hitboxp.x1, hitboxp.x2 = player.x, player.x+2.5
   hitboxp.y1, hitboxp.y2 = player.y-3, player.y+10
-  hitboxe.x1, hitboxe.x2 = enemy.x, enemy.x+2
+  hitboxe.x1, hitboxe.x2 = enemy.x, enemy.x+3
   hitboxe.y1, hitboxe.y2 = enemy.y-3, enemy.y+10
 end
 
@@ -32,7 +32,7 @@ function hit()
 
   if ball.y > hitboxe.y1
   and ball.y < hitboxe.y2
-  and ball.x > hitboxe.x1
+  and ball.x >= hitboxe.x1
   and ball.x < hitboxe.x2 then
     ball.speedx = -3
   end
