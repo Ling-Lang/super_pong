@@ -76,6 +76,7 @@ end
 --update
 
 function _draw()
+	game_over()
 	cls(0)
 	dsprite()
 	hs()
@@ -95,7 +96,7 @@ function _update()
 	update_posi()
 	hit()
 	player.speed=0
-	if player.health < 0 then game_over() end
+	
 	abil()
 
 				--animation

@@ -1,7 +1,10 @@
 --hello
 function game_over()
+  if player.health < 1 then
     cls(136)
     print("game over", 60, 60, 7)
+    printh("Test")
+  end
 end
 function hs()
     print("highscore:", 45, 5, 136)
@@ -12,6 +15,7 @@ function hs()
 --    print(hitboxp.y2)
 --    print(ball.y)
 --    print(enemy.speed)
+    print(player.health)
 end
 
 function update_posi()
