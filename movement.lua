@@ -1,3 +1,4 @@
+--Moin
 function move()
     if btn(3) then player.speed=2end
     if btn(2) then player.speed=-2end
