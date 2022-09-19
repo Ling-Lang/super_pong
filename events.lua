@@ -92,6 +92,7 @@ function hit()
   and ball.x < hitboxe.x2 then
     ball.speedx = -3
     playerhit = false
+    ability.abilcount +=1
   end
   if ball.y > hitboxe.y1
   and ball.y < hitboxe.y2
@@ -101,6 +102,7 @@ function hit()
     ball.speedx = -3
     ball.speedy = -0.8
     playerhit = false
+    ability.abilcount +=1
   end
   if ball.y > hitboxe.y1
   and ball.y < hitboxe.y2
@@ -110,6 +112,7 @@ function hit()
     ball.speedx = -3
     ball.speedy = 0.8
     playerhit = false
+    ability.abilcount +=1
   end
 end
 
@@ -123,10 +126,21 @@ function eai()
 end
 
 function abil()
+  --more abil points
+  if (ability.abilcount >=3) and ability.counter <8 then
+    ability.abilcount = 0
+    ability.counter +=1
+  end
   --speed
-
-  if btn(4) then
+  if btnp(5) and ability.counter>0 and ball.speedx<0 then 
     playerhit = true
-    --printh("speed")
+    ability.counter -=1
+    printh(ability.counter)
+  end
+  --shield
+  if btnp(4) and ability.counter>0 and ability.shield==false then 
+    ability.shield = true
+    ability.counter -=1
+    printh(ability.counter)
   end
 end
