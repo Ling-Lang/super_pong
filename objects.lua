@@ -9,6 +9,11 @@ player = {
     last_score =nil,
     last_score2 = nil
 }
+ability = {
+    counter = 3,
+    shield =false,
+    abilcount =0
+}
 enemy = {
     x = 125,
     y = player.y,
