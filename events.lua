@@ -42,6 +42,7 @@ function hit()
   and ball.x < hitboxp.x2 then
     if(playerhit==true) then
       ball.speedx *=3
+      sfx(0)
       --printh("playerhit")
     end
   elseif ball.y > hitboxp.y1
@@ -49,6 +50,7 @@ function hit()
   and ball.x > hitboxp.x1
   and ball.x < hitboxp.x2 then
     if(playerhit==false) then
+    sfx(0)
       ball.speedx = 3
     end
   end
@@ -61,12 +63,14 @@ function hit()
     if(playerhit==true) then
       ball.speedx *=2
       ball.speedy *=2
+      sfx(0)
       --printh("playerhit")
     end
   elseif ball.y > hitboxp.y1
   and ball.y < hitboxp.y2
   and ball.x > hitboxp.x1
   and ball.x < hitboxp.x2 then
+      sfx(0)
       ball.speedx = 3
   end
   if ball.y > hitboxp.y1
@@ -78,6 +82,7 @@ function hit()
     if(playerhit==true) then
       ball.speedx *=2
       ball.speedy *=2
+      sfx(0)
       --printh("playerhit")
     end
   elseif ball.y > hitboxp.y1
@@ -85,12 +90,14 @@ function hit()
   and ball.x > hitboxp.x1
   and ball.x < hitboxp.x2 then
       ball.speedx = 3
+      sfx(0)
   end
   if ball.y > hitboxe.y1
   and ball.y < hitboxe.y2
   and ball.x+8 > hitboxe.x1
   and ball.x < hitboxe.x2 then
     ball.speedx = -3
+    sfx(0)
     playerhit = false
   end
   if ball.y > hitboxe.y1
@@ -100,6 +107,7 @@ function hit()
   and enemy.speed < 1 then
     ball.speedx = -3
     ball.speedy = -0.8
+    sfx(0)
     playerhit = false
   end
   if ball.y > hitboxe.y1
@@ -110,6 +118,7 @@ function hit()
     ball.speedx = -3
     ball.speedy = 0.8
     playerhit = false
+    sfx(0)
   end
 end
 
