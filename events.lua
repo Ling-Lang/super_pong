@@ -10,6 +10,8 @@ function game_over()
     print(player.last_score, 110, 55, 7)
     print("dev highscore:", 44, 65, 7)
     print("11", 110, 65, 7)
+    ball.speedx = 0
+    ball.speedy= 0
   end
 end
 function hs()
