@@ -11,7 +11,15 @@ function move()
     if(enemy.y<0) then enemy.y=120end
     if(enemy.y>120) then enemy.speed=0end
     if(ball.x>130) then player.score+=1 ball.x=60 ball.y = 60 player.y = 60 ball.speedy = 0 enemy.y = 60end
-    if(ball.x<-2) then player.health-=1 ball.x=60 ball.y = 60 player.y = 60 ball.speedy = 0 enemy.y=60end
+    if(ball.x<-2) then
+      player.health-=1
+      deli(hearts, player.health)
+      ball.x=60
+      ball.y = 60
+      player.y = 60
+      ball.speedy = 0
+      enemy.y=60
+    end
     if ball.y > 126 then ball.speedy *= -1 end
     if ball.y < 2 then ball.speedy *= -1 end
 end

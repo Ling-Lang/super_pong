@@ -2,7 +2,14 @@
 function game_over()
   if player.health < 1 then
     cls(136)
-    print("game over", 60, 60, 7)
+    player.last_score = player.score
+    print("game over", 45, 20, 7)
+    print("leader board", 37, 40, 7)
+    print("________________________________________________________________________________________________________________________________________________", 0, 45,7)
+    print("your highscore:", 44, 55, 7)
+    print(player.last_score, 110, 55, 7)
+    print("dev highscore:", 44, 65, 7)
+    print("11", 110, 65, 7)
     printh("Test")
   end
 end

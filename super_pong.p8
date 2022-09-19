@@ -104,23 +104,25 @@ end
 --update
 
 function _draw()
-	game_over()
-	cls(0)
-	dsprite()
-	hs()
+	if player.health > 0 then
+		game_over()
+ 	cls(0)
+		dsprite()
+		hs()
 	
-			--animation
+				--animation
 			
-			--particles
+				--particles
 			
-			for particle in all(particles) do
-			spr(particle.sprite,particle.x,112,2,2) end
+				for particle in all(particles) do
+				spr(particle.sprite,particle.x,112,2,2) end
 			
-			--hearts
-			for heart in all(hearts) do
-			spr(heart.sprite,heart.x,112,2,2)  end
-			
-
+				--hearts
+				for heart in all(hearts) do
+				spr(heart.sprite,heart.x,112,2,2)  end
+	elseif player.health <= 0 then
+		game_over()
+	end
 end
 
 function _update()

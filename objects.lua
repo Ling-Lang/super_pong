@@ -4,8 +4,10 @@ player = {
     y = 60,
     speed = 0,
     sp = 1,
-    score = 1,
-    health = 3
+    score = 0,
+    health = 4,
+    last_score =nil,
+    last_score2 = nil
 }
 enemy = {
     x = 125,
