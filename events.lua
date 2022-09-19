@@ -135,12 +135,12 @@ function abil()
   if btnp(5) and ability.counter>0 and ball.speedx<0 then 
     playerhit = true
     ability.counter -=1
-    printh(ability.counter)
+    --printh(ability.counter)
   end
   --shield
   if btnp(4) and ability.counter>0 and ability.shield==false then 
     ability.shield = true
     ability.counter -=1
-    printh(ability.counter)
+    --printh(ability.counter)
   end
 end
