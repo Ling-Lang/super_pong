@@ -8,15 +8,14 @@ __lua__
 #include events.lua
 function _init()
 	cls(0)
-	print(player.speed, 20, 20, 4)
-	
+
 			--animation
-	
+
 			particles = {}
 			hearts = {}
-	
+
 			--particles
-	
+
 			particle1 = {
 			sprite = 100,
 			timing = 0.15,
@@ -45,7 +44,7 @@ function _init()
 			sprite = 100,
 			timing = 0.15,
 			x = 64
-			} 
+			}
 
 			particle6 = {
 			sprite = 100,
@@ -73,31 +72,31 @@ function _init()
 			add(particles,particle6)
 			add(particles,particle7)
 			add(particles,particle8)
-			
+
 			--hearts
-			
+
 			heart1 = {
 			sprite = 32,
 			timing = 0.13,
 			x = 0
 			}
-			
+
 			heart2 = {
 			sprite = 32,
 			timing = 0.13,
 			x = 17
 			}
-			
+
 			heart3 = {
 			sprite = 32,
 			timing = 0.13,
 			x = 34
 			}
-			
+
 			add(hearts,heart1)
 			add(hearts,heart2)
 			add(hearts,heart3)
-			
+
 end
 
 -->8
@@ -109,14 +108,14 @@ function _draw()
  	cls(0)
 		dsprite()
 		hs()
-	
+
 				--animation
-			
+
 				--particles
-			
+
 				for particle in all(particles) do
 				spr(particle.sprite,particle.x,112,2,2) end
-			
+
 				--hearts
 				for heart in all(hearts) do
 				spr(heart.sprite,heart.x,112,2,2)  end
@@ -131,26 +130,26 @@ function _update()
 	update_posi()
 	hit()
 	player.speed=0
-	
+
 	abil()
 
 				--animation
-				
+
 				--particles
 
 				for particle in all(particles) do
 				particle.sprite += particle.timing
-				if particle.sprite > 106 then particle.sprite = 100 end	
+				if particle.sprite > 106 then particle.sprite = 100 end
 				end
-				
+
 				--hearts
-				
+
 				for heart in all(hearts) do
 				--heart.sprite += heart.timing
 				heart.sprite += 2
-				if heart.sprite > 36 then heart.sprite = 32 end	
+				if heart.sprite > 36 then heart.sprite = 32 end
 				end
-	
+
 end
 __gfx__
 00000000700000000700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

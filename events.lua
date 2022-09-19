@@ -10,7 +10,6 @@ function game_over()
     print(player.last_score, 110, 55, 7)
     print("dev highscore:", 44, 65, 7)
     print("11", 110, 65, 7)
-    printh("Test")
   end
 end
 function hs()
@@ -22,7 +21,6 @@ function hs()
 --    print(hitboxp.y2)
 --    print(ball.y)
 --    print(enemy.speed)
-    print(player.health)
 end
 
 function update_posi()
