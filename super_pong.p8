@@ -9,11 +9,11 @@ __lua__
 function _init()
 	cls(0)
 	print(player.speed, 20, 20, 4)
-
-			--animations
-
+	
+			--animation
+	
 			particles = {}
-
+	
 			particle1 = {
 			sprite = 100,
 			timing = 0.15,
@@ -42,7 +42,7 @@ function _init()
 			sprite = 100,
 			timing = 0.15,
 			x = 64
-			}
+			} 
 
 			particle6 = {
 			sprite = 100,
@@ -79,12 +79,12 @@ function _draw()
 	cls(0)
 	dsprite()
 	hs()
-
+	
 			--animation
-
+			
 			for particle in all(particles) do
 			spr(particle.sprite,particle.x,112,2,2)
-
+			
 	end
 
 end
@@ -95,17 +95,17 @@ function _update()
 	update_posi()
 	hit()
 	player.speed=0
+	if player.health < 0 then game_over() end
 	abil()
---	enemy.speed=0
 
 				--animation
 
 				for particle in all(particles) do
 				particle.sprite += particle.timing
-				if particle.sprite > 106 then particle.sprite = 100 end
-
+				if particle.sprite > 106 then particle.sprite = 100 end	
+				
 	end
-
+	
 end
 __gfx__
 00000000700000000700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

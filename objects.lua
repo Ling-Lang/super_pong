@@ -4,7 +4,8 @@ player = {
     y = 60,
     speed = 0,
     sp = 1,
-    score = 1
+    score = 1,
+    health = 3
 }
 enemy = {
     x = 125,
